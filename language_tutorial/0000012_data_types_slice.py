@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-from typing import Dict, Any
 
 
 def print_line(val: str, length=80):
     print(val.center(length, "*"))
 
 
-squares = [1, 4, 9, 16, 25]
+squares: list[int] = [1, 4, 9, 16, 25]
 print_line("slice + slice")
 a_slice_1 = squares + [36]
 print(f'squares: {squares}')
@@ -38,3 +37,9 @@ a_map_4: dict[str, int] = {}
 for idx in range(len(a_slice_4)):
     a_map_4[str(idx + 1)] = a_slice_4[idx]
 print(f'a_map_4 -> {a_map_4}')
+#
+print_line("in slice")
+# False
+print(5 in squares)
+# True
+print(25 in squares)
