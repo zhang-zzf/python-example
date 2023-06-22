@@ -74,8 +74,41 @@ def write_multiple_items(file, separator, *args):
 
 
 def concat(*args, sep='/') -> str:
+    """ concat
+
+    :param args: arguments to concat
+    :param sep:  the separator to join
+    :return:  the joined str
+    """
     return sep.join(args)
 
 
 print(concat('a', 'b'))
 print(concat('a', 'b', sep=','))
+
+print_line('lambda')
+
+
+def make_incrementor(n: int):
+    """ Do nothing, but document it.
+
+    No, really, it does not do anything.
+
+    :param int n: the basement
+    :return: the sum function
+    """
+    return lambda x: x + n
+
+
+f1 = make_incrementor(5)
+# 8
+print(f1(3))
+
+f2 = lambda x, y: x * y
+# 10
+print(f2(2, 5))
+
+pairs = [(1, 'one'), (2, 'two'), (3, 'three'), (4, 'four')]
+# key 需要一个函数
+pairs.sort(key=lambda p: p[1])
+print(pairs)

@@ -34,3 +34,12 @@ print('C:\some\name')
 # r'' 不会把前置 \ 的字符转义成特殊字符
 # C:\some\name
 print(r'C:\some\name')
+
+#
+print_line("bool")
+a_true: bool = True
+a_false: bool = False
+# False, True
+print(bool(0), bool(1))
+# False, True
+print(bool(''), bool(' '))
