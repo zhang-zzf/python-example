@@ -19,3 +19,15 @@ print(str_bytes)
 # Hello, 占占峰
 print(str_bytes.decode(encoding='utf-8'))
 
+print_line("reverse str")
+a_str_2: str = "123"
+print(a_str_2[::-1])
+
+print_line("str for c in str")
+a_str_3: str = "你好"
+for uc in a_str_3:
+    print(uc)
+
+print_line("str if c in str")
+contains: bool = '你好' in a_str_3
+print(f"c in str -> {contains}")
