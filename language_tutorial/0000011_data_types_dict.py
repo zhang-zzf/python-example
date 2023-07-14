@@ -23,3 +23,9 @@ print_line('check dict exists key')
 print('Hans' in users)
 # False
 print('zzf' in users)
+
+print_line("key not exists")
+# None
+print(users.get("key not exist"))
+# KeyError
+# print(users['key not exist'])
