@@ -31,3 +31,17 @@ for uc in a_str_3:
 print_line("str if c in str")
 contains: bool = '你好' in a_str_3
 print(f"c in str -> {contains}")
+
+print_line("char in str")
+# 你 2
+str__: str = a_str_3[0]
+print(str__, a_str_2[1])
+
+
+print_line("str == 判等")
+# False
+print(None == "")
+# False
+# 等同于 "" == None
+print("" is None)
+

@@ -89,3 +89,8 @@ print(a_squares_3)
 pi_list = [str(round(pi, i)) for i in range(1, 6)]
 # ['3.1', '3.14', '3.142', '3.1416', '3.14159']
 print(pi_list)
+
+print_line("None + [] => Runtime Error")
+a_none_slice = None
+# error
+# print([1] + a_none_slice)
