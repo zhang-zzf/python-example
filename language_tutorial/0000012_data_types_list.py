@@ -94,3 +94,9 @@ print_line("None + [] => Runtime Error")
 a_none_slice = None
 # error
 # print([1] + a_none_slice)
+
+print_line("[] is False")
+a_slice_6 = []
+print(f'{a_slice_6} -> {True if a_slice_6 else False}')
+a_slice_6.append(1)
+print(f'{a_slice_6} -> {True if a_slice_6 else False}')

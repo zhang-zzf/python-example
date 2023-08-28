@@ -7,10 +7,12 @@ def print_line(val: str, length=80):
 
 
 print_line('data type: int/float')
+a_int = 3
+print('1 in binary 3 => ', a_int.bit_count())
 print(int(5.6), int(float('5.6')))
 #
 print_line('data type: str')
-aStr1: str = "Hello"
+aStr1 = "Hello"
 aStr2: str = 'World'
 # 第一行和最后一行都有一个换行符
 aStr3: str = '''
@@ -39,7 +41,24 @@ print(r'C:\some\name')
 print_line("bool")
 a_true: bool = True
 a_false: bool = False
+a_bool = True
 # False, True
 print(bool(0), bool(1))
 # False, True
 print(bool(''), bool(' '))
+
+# str to num
+# num to str
+print_line("str <-> num")
+print(str(430043), int('43'))
+
+# None == None ?
+print_line("None == None")
+print(None == None)
+
+# in 判断集合中是否存在元素
+print_line("in to check if a item is in a collection")
+a_list = [1]
+a_set = {1}
+a_map = {"a": 1}
+print(f'{1 in a_list}, {1 in a_set}, {"a" in a_map}, {1 in a_map}')

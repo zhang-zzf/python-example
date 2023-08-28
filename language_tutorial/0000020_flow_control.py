@@ -34,12 +34,17 @@ def match_func(status: int) -> str:
 
 
 def for_func():
-    for x in [1, 2, 3, 4]:
+    a_list = [1, 2, 3, 4]
+    for x in a_list:
         print(x, x ** 2)
+
+    for x in range(len(a_list)):
+        print(a_list[x], a_list[x] * a_list[x])
 
     # 遍历集合时修改集合的内容，会很容易生成错误的结果。
     # 因此不能直接进行循环，而是应遍历该集合的副本或创建新的集合：
-    users: dict[str, str] = {'Hans': 'active', 'Éléonore': 'inactive', '景太郎': 'active'}
+    users: dict[str, str] = {'Hans': 'active', 'Éléonore': 'inactive',
+                             '景太郎': 'active'}
     print(f'users -> {users}')
     for u, s in users.copy().items():
         if s == 'inactive':
@@ -60,3 +65,8 @@ print(match_func(500))
 # for
 print_line('for')
 for_func()
+
+if None and 0 and 0.0 and [] and set() and {}:
+    print('condition is True')
+else:
+    print('condition is False')

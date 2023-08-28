@@ -18,3 +18,7 @@ print(basket)
 
 # set 也可以使用推导式
 a_set_3 = {x for x in 'abracadabra' if x not in 'abc'}
+
+print_line("iterate set")
+for x in basket:
+    print(x)
