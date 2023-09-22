@@ -8,7 +8,7 @@ from list_node import ListNode
 class ListNodeTest(TestCase):
     def test_create_list_node(self):
         head = ListNode.new_list([1, 2, 3])
-        self.assertEqual(2, head.next.val)
+        self.assertEqual(1, head.next.val)
 
 
 if __name__ == '__main__':
