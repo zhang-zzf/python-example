@@ -1,11 +1,17 @@
 from __future__ import annotations
 
+from playhouse.pool import PooledMySQLDatabase
+from datetime import datetime
 import json
 
 from peewee import *
 from peewee import CursorWrapper
 
-from local_host import db
+db = PooledMySQLDatabase('test',
+                         user='root', password='test',
+                         host='localhost', port=3306,
+                         max_connections=16,
+                         stale_timeout=300)
 
 
 class DoubanPO(Model):
@@ -16,8 +22,8 @@ class DoubanPO(Model):
     rating_num = DecimalField(default=0.0)
     desc = TextField()
     poster_img_path = CharField(default='')
-    created_at = DateTimeField()
-    updated_at = DateTimeField()
+    created_at = DateTimeField(default=datetime.now())
+    updated_at = DateTimeField(default=datetime.now())
 
     # imdb_id 是业务唯一主键, 数据库没有唯一索引
     # TODO 使用 select *** for update 原子更新

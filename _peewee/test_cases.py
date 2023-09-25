@@ -1,12 +1,12 @@
 import logging
 import unittest
-from datetime import date, datetime
+from datetime import datetime
 from unittest import TestCase
 
 from peewee import ModelSelect, Select
 
 from _peewee.config import LogConfig
-from _peewee.db_test import DoubanPO
+from _peewee.db_mysql_localhost import DoubanPO
 
 
 class Douban:

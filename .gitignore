@@ -335,3 +335,5 @@ pip-selfcheck.json
 # End of https://www.toptal.com/developers/gitignore/api/macos,pycharm,python,venv
 
 **/_trial_temp
+
+**/test.db
