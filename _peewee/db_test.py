@@ -24,6 +24,7 @@ class DoubanPO(Model):
     # 假设 model 中包含全部字段的数据
     @db.atomic()  # TODO 已验证：事务生效
     def save_by_imdb_id_with_tx_and_lock(self) -> (int, int):
+        # TODO SQL Injection
         sql = f"select `id` from douban_top250 " \
               f"where imdb_id = %s " \
               f"for update"
