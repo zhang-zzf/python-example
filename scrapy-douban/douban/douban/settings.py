@@ -79,6 +79,7 @@ DOWNLOADER_MIDDLEWARES = {
 ITEM_PIPELINES = {
     "douban.pipelines.PictureDownloadPipeline": 10,
     "douban.pipelines.LogItemJSONString": 100,
+    "douban.pipelines.MySQLPersistence": 110,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

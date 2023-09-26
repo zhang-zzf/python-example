@@ -8,6 +8,8 @@ import scrapy
 # useful for handling different item types with a single interface
 from scrapy.pipelines.images import ImagesPipeline
 
+from douban.repo.mysql_localhost import DoubanTop250
+
 
 class DoubanPipeline:
     def process_item(self, item, spider):
@@ -44,3 +46,9 @@ class LogItemJSONString:
     def process_item(self, item, spider: scrapy.Spider):
         spider.logger.info(f'item downloaded -> {json.dumps(item, ensure_ascii=False)}')
         return item
+
+
+class MySQLPersistence:
+    def process_item(self, item, spider: scrapy.Spider):
+        DoubanTop250(**item).save()
+        pass
