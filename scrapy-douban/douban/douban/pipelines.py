@@ -8,7 +8,7 @@ import scrapy
 # useful for handling different item types with a single interface
 from scrapy.pipelines.images import ImagesPipeline
 
-from douban.repo.mysql_localhost import DoubanTop250
+from d import DoubanTop250
 
 
 class DoubanPipeline:
