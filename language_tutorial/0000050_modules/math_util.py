@@ -21,4 +21,6 @@ if __name__ == "__main__":
     print(f'Hello from {os.path.basename(__file__)}')
     print(f"cur module names: \n{dir()}")
     print(f"fibo module names: \n{dir(fibo)}")
+    print(f"fib in cur file: {fib(5)}")
+    print(f"fib in fibo file: {fibo.fib(5)}")
 

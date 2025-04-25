@@ -20,7 +20,7 @@ a_func(arg1=1, a="a")
 a_func(1, 2, 3, a="a")
 ```
 
-### list/dick unpacking
+### list/dict unpacking
 
 ```python
 # 表示 接受 arg1, 0 到 n 个位置参数，0 到 n 个 keyword 参数
