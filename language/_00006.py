@@ -13,6 +13,7 @@ def get_file_suffix(filename: str, need_dot: bool = None) -> str:
 
 
 class Test(TestCase):
+
     def test_get_file_suffix_normal_case(self):
         file_suffix = get_file_suffix('222.aa.mp4')
         self.assertEqual(file_suffix, '.mp4')

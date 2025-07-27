@@ -34,7 +34,7 @@ class DoubanPO(Model):
         sql = f"select `id` from douban_top250 " \
               f"where imdb_id = %s " \
               f"for update"
-        db_raw: CursorWrapper = self.raw(sql, self.imdb_id).execute()
+        db_raw: CursorWrapper = self.raw(sql, self.imdb_id).sacute()
         if db_raw:
             self.id = db_raw[0].id
         return self.save(), self.id

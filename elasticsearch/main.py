@@ -9,5 +9,4 @@ es = Elasticsearch(
 ping = es.ping()
 print(ping)
 
-es.index(index="family_accounts_pay",
-         body={})
+es.index(index="family_accounts_pay", body={})
